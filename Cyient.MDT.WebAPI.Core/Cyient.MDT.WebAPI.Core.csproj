@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9C60B656-60E8-4F41-BFDF-8961ADBA5A7B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cyient.MDT.WebAPI.Core</RootNamespace>
+    <AssemblyName>Cyient.MDT.WebAPI.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Logger.cs" />
+    <Compile Include="Common\SecurityEncryptDecrypt.cs" />
+    <Compile Include="Common\ErrorInfoFromSQL.cs" />
+    <Compile Include="Entities\Account\ChangePassword.cs" />
+    <Compile Include="Entities\Account\ForgotPassword.cs" />
+    <Compile Include="Entities\Account\UploadProfilePics.cs" />
+    <Compile Include="Entities\Account\UserLogin.cs" />
+    <Compile Include="Entities\Account\UserLoginDetails.cs" />
+    <Compile Include="Entities\BasicInput\BasicInput.cs" />
+    <Compile Include="Entities\BasicInput\BasicInputOptions.cs" />
+    <Compile Include="Entities\SubSystem\PackageSystem.cs" />
+    <Compile Include="Entities\SideMenu\ConfigurationList.cs" />
+    <Compile Include="Entities\SideMenu\PackageList.cs" />
+    <Compile Include="Entities\SideMenu\SolutionList.cs" />
+    <Compile Include="Entities\SubSystem\SystemVariants.cs" />
+    <Compile Include="Repository\Account\IUserAccount.cs" />
+    <Compile Include="Repository\BasicInput\IBasicInputOptions.cs" />
+    <Compile Include="Common\MDTTransactionInfo.cs" />
+    <Compile Include="Repository\SideMenu\ISideMenu.cs" />
+    <Compile Include="Repository\SubSystem\ISubSystem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
